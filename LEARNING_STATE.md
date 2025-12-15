@@ -7,6 +7,13 @@
 > - AI 写阶段性评语必须写进：**8. AI Coach Notes (Append Only)**，并引用证据（commit/PR/issues 链接或“已完成的功能说明”）。
 > - 若 AI 建议调整学习计划，必须在：**2. Roadmap (Editable) → Change Log** 里**追加**一条变更记录（含日期/原因/影响）。
 
+> **SSOT 规则（给 AI / 给我）**
+>
+> - 允许修改的区域：**1 / 2 / 5 / 9**（以及补充链接/证据），其余以“追加”为主。
+> - “Append Only”章节（3/8）：**只在末尾追加**，不改旧条目（包括表格旧行）。
+> - 建议“证据优先级”：`commit/PR > 可运行命令 + 输出截图/日志 > 功能说明`。
+> - 每次会话 AI 输出必须包含：`今天 1–3 步` + `每步验收标准(DoD)` + `要写入 Progress Log 的一句话`。
+
 ---
 
 ## 0. Profile（个人与目标）
@@ -37,6 +44,12 @@
 | 本周（Week 01） | 完成 JavaSE 学生管理系统 v1.0 并建立学习节奏 | 能 `mvnd clean test` 通过；能 `mvnd exec:java` 运行；每天有 commit；完成 Week1 文档与复盘 |
 
 **Today (可改)**
+
+| Daily Constraints | Target |
+|---|---|
+| Time Budget | 3–4h |
+| Output Rule | 每天至少 1 个可回溯的 commit（或 1 条高质量日志） |
+| Quality Gate | 任何代码改动：先 `mvnd test` 再 `git commit` |
 
 - 当前任务：
   - [ ] 跑通控制台程序并手动走一遍全流程（新增/查询/更新/删除/排序/筛选）
@@ -73,6 +86,8 @@
 > **Append Only 规则（强制）**：本章节只允许**追加新记录**，不允许删改历史条目。
 >
 > 每条至少包含：Date / Time Spent / What I Built / What I Learned / Problems / Tomorrow Plan / Links
+>
+> 记录约定：**新条目追加在表格最末尾**（方便时间线自然增长）。
 
 ### Daily / Weekly Entries
 
@@ -104,7 +119,7 @@
 | JUnit5 | 1 | [service tests](https://github.com/bry27s/java-student-management/blob/main/src/test/java/com/javalearn/studentmanagement/service/StudentServiceImplTest.java) | 需要练：边界测试/异常测试 |
 | Maven（生命周期/依赖/插件） | 1 | [pom.xml](https://github.com/bry27s/java-student-management/blob/main/pom.xml) | 需要能解释 clean/test/package/exec |
 | Git（分支/PR/日志） | 1 | [commit history](https://github.com/bry27s/java-student-management/commits/main) | 需要练分支与 PR 流程 |
-| IDEA Debug | 1 | [debug notes](docs/intellij-debug.md) | 需要实践：断点、step into/out |
+| IDEA Debug | 1 | [debug notes](https://github.com/bry27s/java-learning-roadmap/blob/main/docs/intellij-debug.md) | 需要实践：断点、step into/out |
 
 ---
 
@@ -113,7 +128,7 @@
 | Area | Readiness | Evidence | Next |
 |---|---:|---|---|
 | 八股（Java 基础） | 1/5 | [interview notes](https://github.com/bry27s/java-student-management/blob/main/docs/interview-notes.md) | 以项目为锚：集合/Map/equals&hashCode/多态 |
-| 项目讲述（3 分钟版本） | 1/5 | [Project Portfolio](#4-project-portfolio项目清单每个项目的状态链接亮点可讲点) | 练“问题→设计→实现→验证→可扩展”结构 |
+| 项目讲述（3 分钟版本） | 1/5 | [Project Portfolio](#4-project-portfolio项目清单每个项目的状态链接亮点可讲点) | 练“问题→设计→实现→验证→可扩展”结构（每次迭代输出 3 句版本） |
 | 手撕（基础算法/代码能力） | 0/5 | [TBD](#) | 每周 2 题：数组/字符串/哈希 |
 | SQL/数据库 | 0/5 | [TBD](#) | Week 5+ 开始 |
 | Spring | 0/5 | [TBD](#) | Week 5+ 开始 |
